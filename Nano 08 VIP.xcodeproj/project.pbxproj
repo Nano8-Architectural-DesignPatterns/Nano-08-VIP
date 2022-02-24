@@ -22,6 +22,7 @@
 		2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */; };
 		2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */; };
 		2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */; };
+		CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		2389DEB027C802AD00193976 /* NewRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				CD0EF8E327C825D00002CCB0 /* Shared */,
 				2389DEB627C8031400193976 /* Scenes */,
 			);
 			path = NewRecipe;
@@ -178,6 +181,14 @@
 				2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD0EF8E327C825D00002CCB0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				2389DECB27C81B8500193976 /* Recipe+CoreDataClass.swift in Sources */,
 				2389DEC627C811E800193976 /* RecipeDetailPresenter.swift in Sources */,
 				2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */,
+				CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */,
 				15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */,
 				2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */,
 				15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */,
