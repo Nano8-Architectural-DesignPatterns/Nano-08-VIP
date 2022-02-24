@@ -11,15 +11,27 @@ struct PersistenceController {
     
     static let shared = PersistenceController()
     
-    let container: NSPersistentContainer
+    private let context: NSManagedObjectContext
 
     init() {
-        container = NSPersistentContainer(name: "nano08")
+        let container = NSPersistentContainer(name: "nano08")
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        context = container.viewContext
+    }
+    
+    
+    mutating func save() {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                //TODO: Create error
+            }
+        }
     }
 }
