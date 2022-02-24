@@ -24,6 +24,7 @@ struct NewRecipeView: View {
                             RoundedRectangle(cornerRadius: 14)
                                 .stroke(Color.black, lineWidth: 2)
                         )
+                    //fgfgfg
                 }
             }
             .padding(.bottom, 25)
