@@ -8,21 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */; };
-		15B1878627C7F3B500DF2342 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878527C7F3B500DF2342 /* ContentView.swift */; };
+		15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878527C7F3B500DF2342 /* HomeView.swift */; };
 		15B1878827C7F3B600DF2342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878727C7F3B600DF2342 /* Assets.xcassets */; };
 		15B1878B27C7F3B600DF2342 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */; };
 		15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878C27C7F3B600DF2342 /* Persistence.swift */; };
-		15B1879027C7F3B600DF2342 /* Nano_08_VIP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878E27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodeld */; };
+		15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */; };
+		2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEB327C802D600193976 /* NewRecipeView.swift */; };
+		2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEBA27C8034600193976 /* RecipeDetailView.swift */; };
+		2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */; };
+		2389DEC427C8104200193976 /* RecipeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC327C8104200193976 /* RecipeDetailsInteractor.swift */; };
+		2389DEC627C811E800193976 /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC527C811E800193976 /* RecipeDetailPresenter.swift */; };
+		2389DECB27C81B8500193976 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC727C81B8500193976 /* Recipe+CoreDataClass.swift */; };
+		2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */; };
+		2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */; };
+		2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15B1878027C7F3B500DF2342 /* Nano 08 VIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nano 08 VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano_08_VIPApp.swift; sourceTree = "<group>"; };
-		15B1878527C7F3B500DF2342 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15B1878527C7F3B500DF2342 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		15B1878727C7F3B600DF2342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15B1878C27C7F3B600DF2342 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		15B1878F27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano_08_VIP.xcdatamodel; sourceTree = "<group>"; };
+		2389DEB327C802D600193976 /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
+		2389DEBA27C8034600193976 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsConfigurator.swift; sourceTree = "<group>"; };
+		2389DEC327C8104200193976 /* RecipeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsInteractor.swift; sourceTree = "<group>"; };
+		2389DEC527C811E800193976 /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
+		2389DEC727C81B8500193976 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +73,10 @@
 		15B1878227C7F3B500DF2342 /* Nano 08 VIP */ = {
 			isa = PBXGroup;
 			children = (
-				15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */,
-				15B1878527C7F3B500DF2342 /* ContentView.swift */,
+				2389DEBE27C8037100193976 /* CoreDataWorker */,
+				2389DEBD27C8036200193976 /* Application */,
+				2389DEAE27C8029300193976 /* Domain */,
 				15B1878727C7F3B600DF2342 /* Assets.xcassets */,
-				15B1878C27C7F3B600DF2342 /* Persistence.swift */,
-				15B1878E27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodeld */,
 				15B1878927C7F3B600DF2342 /* Preview Content */,
 			);
 			path = "Nano 08 VIP";
@@ -71,6 +88,96 @@
 				15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2389DEAE27C8029300193976 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEB027C802AD00193976 /* NewRecipe */,
+				2389DEB827C8032200193976 /* RecipeDetails */,
+				2389DEAF27C8029900193976 /* Home */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2389DEAF27C8029900193976 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEB227C802BC00193976 /* Scenes */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2389DEB027C802AD00193976 /* NewRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEB627C8031400193976 /* Scenes */,
+			);
+			path = NewRecipe;
+			sourceTree = "<group>";
+		};
+		2389DEB227C802BC00193976 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				15B1878527C7F3B500DF2342 /* HomeView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2389DEB627C8031400193976 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEB327C802D600193976 /* NewRecipeView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2389DEB827C8032200193976 /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEB927C8032D00193976 /* Scenes */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		2389DEB927C8032D00193976 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */,
+				2389DEBA27C8034600193976 /* RecipeDetailView.swift */,
+				2389DEC327C8104200193976 /* RecipeDetailsInteractor.swift */,
+				2389DEC527C811E800193976 /* RecipeDetailPresenter.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2389DEBD27C8036200193976 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2389DEBE27C8037100193976 /* CoreDataWorker */ = {
+			isa = PBXGroup;
+			children = (
+				2389DECF27C81B9700193976 /* Entities */,
+				15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */,
+				15B1878C27C7F3B600DF2342 /* Persistence.swift */,
+			);
+			path = CoreDataWorker;
+			sourceTree = "<group>";
+		};
+		2389DECF27C81B9700193976 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2389DEC727C81B8500193976 /* Recipe+CoreDataClass.swift */,
+				2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */,
+				2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */,
+				2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */,
-				15B1879027C7F3B600DF2342 /* Nano_08_VIP.xcdatamodeld in Sources */,
-				15B1878627C7F3B500DF2342 /* ContentView.swift in Sources */,
+				2389DEC427C8104200193976 /* RecipeDetailsInteractor.swift in Sources */,
+				2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */,
+				2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */,
+				2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */,
+				2389DECB27C81B8500193976 /* Recipe+CoreDataClass.swift in Sources */,
+				2389DEC627C811E800193976 /* RecipeDetailPresenter.swift in Sources */,
+				2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */,
+				15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */,
+				2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */,
+				15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */,
+				2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */,
 				15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,13 +467,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		15B1878E27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodeld */ = {
+		15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				15B1878F27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodel */,
 			);
 			currentVersion = 15B1878F27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodel */;
-			path = Nano_08_VIP.xcdatamodeld;
+			path = nano08.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
