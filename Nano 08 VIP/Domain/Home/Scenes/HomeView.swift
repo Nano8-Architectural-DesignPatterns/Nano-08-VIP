@@ -36,7 +36,8 @@ struct HomeView: View {
                             RecipeDetailView()
                                 .configureView(id: recipe.id)
                         } label: {
-                            HomeTableView(title: recipe.name ?? " ", desc: recipe.desc ?? " ", time: Int(recipe.time))
+                            HomeTableView(title: recipe.name ?? " ", desc: recipe.ingredients ?? " ", time: Int(recipe.time))
+
                         }
                     }
                 }
@@ -46,7 +47,7 @@ struct HomeView: View {
                         showCreateRecipe = true
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.blue)
                         }
                     }
                 }

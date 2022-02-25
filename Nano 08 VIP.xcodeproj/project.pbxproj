@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		157356B527C9146C003041E1 /* Data+toUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157356B427C9146C003041E1 /* Data+toUIImage.swift */; };
+		157356B727C91594003041E1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157356B627C91594003041E1 /* ImagePicker.swift */; };
 		15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */; };
 		15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878527C7F3B500DF2342 /* HomeView.swift */; };
 		15B1878827C7F3B600DF2342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878727C7F3B600DF2342 /* Assets.xcassets */; };
@@ -16,7 +18,7 @@
 		15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */; };
 		15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEF027C825920078B485 /* HomeInteractor.swift */; };
 		15DBEEF327C826400078B485 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEF227C826400078B485 /* HomePresenter.swift */; };
-		15DBEEFF27C862180078B485 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEFE27C862180078B485 /* SwiftUIView.swift */; };
+		15DBEEFF27C862180078B485 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEFE27C862180078B485 /* HomeTableView.swift */; };
 		2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEB327C802D600193976 /* NewRecipeView.swift */; };
 		2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEBA27C8034600193976 /* RecipeDetailView.swift */; };
 		2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		157356B427C9146C003041E1 /* Data+toUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+toUIImage.swift"; sourceTree = "<group>"; };
+		157356B627C91594003041E1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		15B1878027C7F3B500DF2342 /* Nano 08 VIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nano 08 VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B1878327C7F3B500DF2342 /* Nano_08_VIPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano_08_VIPApp.swift; sourceTree = "<group>"; };
 		15B1878527C7F3B500DF2342 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 		15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		15DBEEF027C825920078B485 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		15DBEEF227C826400078B485 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		15DBEEFE27C862180078B485 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		15DBEEFE27C862180078B485 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		2389DEB327C802D600193976 /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		2389DEBA27C8034600193976 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsConfigurator.swift; sourceTree = "<group>"; };
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		157356B327C91456003041E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				157356B427C9146C003041E1 /* Data+toUIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		15B1877727C7F3B400DF2342 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +105,7 @@
 		15B1878227C7F3B500DF2342 /* Nano 08 VIP */ = {
 			isa = PBXGroup;
 			children = (
+				157356B327C91456003041E1 /* Extensions */,
 				2389DEBE27C8037100193976 /* CoreDataWorker */,
 				2389DEBD27C8036200193976 /* Application */,
 				2389DEAE27C8029300193976 /* Domain */,
@@ -113,7 +126,7 @@
 		15DBEEFD27C8620F0078B485 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				15DBEEFE27C862180078B485 /* SwiftUIView.swift */,
+				15DBEEFE27C862180078B485 /* HomeTableView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -246,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */,
+				157356B627C91594003041E1 /* ImagePicker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -322,12 +336,14 @@
 			files = (
 				15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */,
 				2389DEC427C8104200193976 /* RecipeDetailsInteractor.swift in Sources */,
-				15DBEEFF27C862180078B485 /* SwiftUIView.swift in Sources */,
+				157356B727C91594003041E1 /* ImagePicker.swift in Sources */,
+				15DBEEFF27C862180078B485 /* HomeTableView.swift in Sources */,
 				2397DC6427C873260075FC04 /* Recipe+CoreDataProperties.swift in Sources */,
 				2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */,
 				2397DC6627C877C90075FC04 /* NewRecipeModel.swift in Sources */,
 				15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */,
 				2397DC5C27C867C50075FC04 /* Recipe+CoreDataClass.swift in Sources */,
+				157356B527C9146C003041E1 /* Data+toUIImage.swift in Sources */,
 				2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */,
 				2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */,
 				2389DEC627C811E800193976 /* RecipeDetailPresenter.swift in Sources */,

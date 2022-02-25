@@ -17,7 +17,7 @@ extension NewRecipeView: NewRecipelDisplayLogic {
     }
     
     func createRecipe() {
-        let request = CreateRecipeRequest(name: name, desc: " ", image: Data(), ingredients: ingredientes, time: picker.selections.first!)
+        let request = CreateRecipeRequest(name: name, desc: desc, image: imageData!, ingredients: ingredients, time: picker.selections.first!)
         interactor?.createRecipe(request: request)
     }
 }
@@ -25,7 +25,10 @@ extension NewRecipeView: NewRecipelDisplayLogic {
 struct NewRecipeView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var name: String = ""
-    @State private var ingredientes: String = ""
+    @State private var ingredients: String = ""
+    @State private var desc: String = ""
+    @State private var imageData: Data?
+    @State private var showingImagePicker = false
     @ObservedObject var showAlert = AlertFunction()
     private var picker = PickerTimer()
     var interactor: NewRecipeBusinessLogic?
@@ -33,11 +36,27 @@ struct NewRecipeView: View {
     var body: some View {
         VStack{
             HStack{
-                VStack{
+                VStack(alignment: .leading) {
+                    Group {
+                        Image(uiImage: imageData?.toUIImage() ?? UIImage(systemName: "person")!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                            .frame(width: 62, height: 62)
+                        
+                        Button {
+                            showingImagePicker = true
+                        } label: {
+                            Text("Alterar foto")
+                        }
+                        .padding(.top, 5)
+                        
+                    }
+                    
                     Text("Nome")
-                        .offset(x: -137)
+                        
                     TextField("", text: $name)
-                        .frame(width: 343, height: 62)
+                        .frame(width: 343, height: 45)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
@@ -45,13 +64,13 @@ struct NewRecipeView: View {
                         )
                 }
             }
-            .padding(.bottom, 25)
+            .padding(.bottom, 12)
             HStack{
-                VStack{
+                VStack(alignment: .leading) {
                     Text("Ingredientes")
-                        .offset(x: -117)
-                    TextField("", text: $ingredientes)
-                        .frame(width: 343, height: 120)
+                        
+                    TextField("", text: $ingredients)
+                        .frame(width: 343, height: 85)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
@@ -59,14 +78,31 @@ struct NewRecipeView: View {
                         )
                 }
             }
-            .padding(.bottom, 25)
+            .padding(.bottom, 12)
             HStack{
-                VStack{
-                    Text("Tempo de preparo")
-                        .offset(x: -92 )
-                    picker
+                VStack(alignment: .leading) {
+                    Text("Modo de preparo")
+
+                    TextField("", text: $desc)
+                        .frame(width: 343, height: 85)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.black, lineWidth: 2)
+                        )
                 }
             }
+            .padding(.bottom, 12)
+            HStack{
+                VStack(alignment: .leading) {
+                    Text("Tempo de preparo")
+                        
+                    picker.frame(width: UIScreen.main.bounds.width - 60, height: 150, alignment: .center)
+                }
+            }
+        }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(imageData: $imageData)
         }
         .alert(Text("Receita salva!"), isPresented: $showAlert.show, actions: {
             Button {
