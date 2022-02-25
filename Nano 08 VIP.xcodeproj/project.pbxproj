@@ -27,6 +27,9 @@
 		2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */; };
 		2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */; };
 		CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */; };
+		CDC4E3E427C8679900A448BF /* NewRecipesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E3E327C8679900A448BF /* NewRecipesConfigurator.swift */; };
+		CDC4E3E627C867BE00A448BF /* NewRecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E3E527C867BE00A448BF /* NewRecipesInteractor.swift */; };
+		CDC4E3E827C867ED00A448BF /* NewRecipesDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E3E727C867ED00A448BF /* NewRecipesDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
+		CDC4E3E327C8679900A448BF /* NewRecipesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesConfigurator.swift; sourceTree = "<group>"; };
+		CDC4E3E527C867BE00A448BF /* NewRecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesInteractor.swift; sourceTree = "<group>"; };
+		CDC4E3E727C867ED00A448BF /* NewRecipesDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +156,10 @@
 		2389DEB627C8031400193976 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CDC4E3E327C8679900A448BF /* NewRecipesConfigurator.swift */,
 				2389DEB327C802D600193976 /* NewRecipeView.swift */,
+				CDC4E3E527C867BE00A448BF /* NewRecipesInteractor.swift */,
+				CDC4E3E727C867ED00A448BF /* NewRecipesDetailPresenter.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -293,10 +302,13 @@
 				2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */,
 				CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */,
 				15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */,
+				CDC4E3E827C867ED00A448BF /* NewRecipesDetailPresenter.swift in Sources */,
 				2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */,
 				15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */,
 				15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */,
+				CDC4E3E427C8679900A448BF /* NewRecipesConfigurator.swift in Sources */,
 				2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */,
+				CDC4E3E627C867BE00A448BF /* NewRecipesInteractor.swift in Sources */,
 				15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */,
 				15DBEEF327C826400078B485 /* HomePresenter.swift in Sources */,
 			);
