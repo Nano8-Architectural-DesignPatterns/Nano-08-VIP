@@ -19,4 +19,5 @@ extension NewRecipeView {
         presenter.view = view
         return view
     }
+    //-
 }
