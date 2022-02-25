@@ -67,23 +67,14 @@ struct PickerView: UIViewRepresentable {
 
 struct PickerTimer: View {
     private let data: [[String]] = [
-        Array(0...10).map { "\($0)" },
-        Array(0...120).map { "\($0)" },
-        Array(0...600).map { "\($0)" }
+        Array(0...120).map { "\($0)" }
     ]
 
-    @State var selections: [Int] = [5, 10, 50]
+    @State var selections: [Int] = [5]
 
     var body: some View {
         VStack {
             PickerView(data: self.data, selections: self.$selections)
-////            Text("\(self.data[0][self.selections[0]]) \(self.data[1][self.selections[1]]) \(self.data[2][self.selections[2]])")
-////                .font(.system(size: 25))
-////                .overlay(
-////                    RoundedRectangle(cornerRadius: 2)
-////                        .stroke(Color.black, lineWidth: 2)
-////                        .frame(width: 90, height: 25)
-//                )
         } //VStack
     }
 }

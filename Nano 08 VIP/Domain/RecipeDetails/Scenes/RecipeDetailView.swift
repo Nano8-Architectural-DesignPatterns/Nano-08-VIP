@@ -26,7 +26,7 @@ struct RecipeDetailView: View {
     var interactor: ShowRecipeDetailBusinessLogic?
     var body: some View {
         ScrollView {
-            Image(uiImage: model.recipe.image?.toUIImage() ?? UIImage(systemName: "person.fill")!)
+            Image(uiImage: model.recipe.image?.toUIImage() ?? UIImage(systemName: "questionmark.circle")!)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom, 12)

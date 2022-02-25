@@ -17,7 +17,7 @@ extension NewRecipeView: NewRecipelDisplayLogic {
     }
     
     func createRecipe() {
-        let request = CreateRecipeRequest(name: name, desc: desc, image: imageData!, ingredients: ingredients, time: picker.selections.first!)
+        let request = CreateRecipeRequest(name: name, desc: desc, image: imageData ?? Data(), ingredients: ingredients, time: picker.selections.first!)
         //MARK: CHAMA O INTERACTOR PARA CRIAR A RECEITA
         interactor?.createRecipe(request: request)
     }
@@ -37,11 +37,10 @@ struct NewRecipeView: View {
     var body: some View {
         VStack{
             VStack(alignment: .center) {
-                Image(uiImage: imageData?.toUIImage() ?? UIImage(systemName: "person")!)
+                Image(uiImage: imageData?.toUIImage() ?? UIImage(systemName: "questionmark.circle")!)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipShape(Circle())
-                    .frame(width: 80, height: 80)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 
                 Button {
                     showingImagePicker = true
@@ -52,9 +51,7 @@ struct NewRecipeView: View {
             }
             HStack{
                 VStack(alignment: .leading) {
-                    
                     Text("Nome")
-                        
                     TextField("", text: $name)
                         .frame(width: 343, height: 45)
                         .cornerRadius(15)
@@ -69,7 +66,7 @@ struct NewRecipeView: View {
                 VStack(alignment: .leading) {
                     Text("Ingredientes")
                         
-                    TextField("", text: $ingredients)
+                    TextEditor(text: $ingredients)
                         .frame(width: 343, height: 85)
                         .cornerRadius(15)
                         .overlay(
@@ -83,7 +80,7 @@ struct NewRecipeView: View {
                 VStack(alignment: .leading) {
                     Text("Modo de preparo")
 
-                    TextField("", text: $desc)
+                    TextEditor(text: $desc)
                         .frame(width: 343, height: 85)
                         .cornerRadius(15)
                         .overlay(
@@ -95,7 +92,7 @@ struct NewRecipeView: View {
             .padding(.bottom, 12)
             HStack{
                 VStack(alignment: .leading) {
-                    Text("Tempo de preparo")
+                    Text("Tempo de preparo (Minutos)")
                         
                     picker.frame(width: UIScreen.main.bounds.width - 60, height: 150, alignment: .center)
                 }
@@ -117,6 +114,12 @@ struct NewRecipeView: View {
               createRecipe()
             })
         )
+        .navigationBarItems(leading:
+            Button("Cancelar", action: {
+            presentationMode.wrappedValue.dismiss()
+            })
+        )
+
     }
 }
 

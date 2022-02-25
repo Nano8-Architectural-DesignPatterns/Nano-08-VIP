@@ -36,7 +36,7 @@ struct HomeView: View {
                             RecipeDetailView()
                                 .configureView(id: recipe.id)
                         } label: {
-                            HomeTableView(title: recipe.name ?? " ", desc: recipe.ingredients ?? " ", time: Int(recipe.time))
+                            HomeTableView(title: recipe.name ?? " ", desc: recipe.ingredients ?? " ", time: Int(recipe.time), image: recipe.image)
                             
                         }
                     }
