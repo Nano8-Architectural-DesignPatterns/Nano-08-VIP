@@ -13,7 +13,7 @@
 		15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878527C7F3B500DF2342 /* HomeView.swift */; };
 		15B1878827C7F3B600DF2342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878727C7F3B600DF2342 /* Assets.xcassets */; };
 		15B1878B27C7F3B600DF2342 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */; };
-		15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878C27C7F3B600DF2342 /* Persistence.swift */; };
+		15B1878D27C7F3B600DF2342 /* CoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878C27C7F3B600DF2342 /* CoreDataWorker.swift */; };
 		15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */; };
 		15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */; };
 		15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEF027C825920078B485 /* HomeInteractor.swift */; };
@@ -44,7 +44,7 @@
 		15B1878527C7F3B500DF2342 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		15B1878727C7F3B600DF2342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		15B1878C27C7F3B600DF2342 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		15B1878C27C7F3B600DF2342 /* CoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorker.swift; sourceTree = "<group>"; };
 		15B1878F27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano_08_VIP.xcdatamodel; sourceTree = "<group>"; };
 		15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		15DBEEF027C825920078B485 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			children = (
 				2389DECF27C81B9700193976 /* Entities */,
 				15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */,
-				15B1878C27C7F3B600DF2342 /* Persistence.swift */,
+				15B1878C27C7F3B600DF2342 /* CoreDataWorker.swift */,
 			);
 			path = CoreDataWorker;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */,
+				15B1878D27C7F3B600DF2342 /* CoreDataWorker.swift in Sources */,
 				2389DEC427C8104200193976 /* RecipeDetailsInteractor.swift in Sources */,
 				157356B727C91594003041E1 /* ImagePicker.swift in Sources */,
 				15DBEEFF27C862180078B485 /* HomeTableView.swift in Sources */,

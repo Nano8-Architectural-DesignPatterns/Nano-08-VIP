@@ -18,6 +18,7 @@ extension NewRecipeView: NewRecipelDisplayLogic {
     
     func createRecipe() {
         let request = CreateRecipeRequest(name: name, desc: desc, image: imageData!, ingredients: ingredients, time: picker.selections.first!)
+        //MARK: CHAMA O INTERACTOR PARA CRIAR A RECEITA
         interactor?.createRecipe(request: request)
     }
 }

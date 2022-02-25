@@ -37,14 +37,14 @@ struct HomeView: View {
                                 .configureView(id: recipe.id)
                         } label: {
                             HomeTableView(title: recipe.name ?? " ", desc: recipe.ingredients ?? " ", time: Int(recipe.time))
-
+                            
                         }
                     }
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                        showCreateRecipe = true
+                            showCreateRecipe = true
                         } label: {
                             Image(systemName: "plus")
                                 .foregroundColor(.blue)
@@ -64,7 +64,7 @@ struct HomeView: View {
             })
         }
         
-
+        
     }
 }
 

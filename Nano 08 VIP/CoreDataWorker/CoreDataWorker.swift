@@ -7,9 +7,9 @@
 
 import CoreData
 
-struct PersistenceController {
-    
-    static var shared = PersistenceController()
+struct CoreDataWorker {
+    //MARK: VARIÁVEL SINGLETON 
+    static var shared = CoreDataWorker()
     
     private let context: NSManagedObjectContext
     

@@ -14,8 +14,10 @@ protocol NewRecipePresentaionLogic {
 class NewRecipePresenter {
     var view: NewRecipelDisplayLogic?
 }
-
+//MARK: MOSTRA O ALERTA QUE A RECEITA FOI CRIADO
 extension NewRecipePresenter: NewRecipePresentaionLogic {
+    
+    //MARK: É CHAMADO PELO INTERACTOR
     func presentNewRecipeDetail() {
         view?.newRecipeShowAlert()
     }

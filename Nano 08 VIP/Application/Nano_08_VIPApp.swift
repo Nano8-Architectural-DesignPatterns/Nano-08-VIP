@@ -12,6 +12,7 @@ struct Nano_08_VIPApp: App {
 
     var body: some Scene {
         WindowGroup {
+            //MARK: EXECUTA O MÉTODO CONFIGURATOR PARA CRIAR AS CAMADAS
             HomeView()
                 .configureView()
         }

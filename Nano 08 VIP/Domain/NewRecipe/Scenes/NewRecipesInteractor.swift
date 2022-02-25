@@ -14,14 +14,14 @@ protocol NewRecipeBusinessLogic {
 class NewRecipeInteractor {
     var presenter: NewRecipePresentaionLogic?
 }
-
+//MARK: TRANSFERE O REQUEST PARA O CORE DATA
 extension NewRecipeInteractor: NewRecipeBusinessLogic  {
     func createRecipe(request: CreateRecipeRequest) {
-        PersistenceController.shared.createRecipe(request: request)
+        CoreDataWorker.shared.createRecipe(request: request)
+        
+        //MARK: MOSTRA O ALERTA APÓS A RECEITA SER CRIADA
         presenter?.presentNewRecipeDetail()
     }
     
-
-
 }
 

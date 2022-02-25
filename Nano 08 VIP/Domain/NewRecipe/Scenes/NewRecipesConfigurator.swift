@@ -14,9 +14,12 @@ extension NewRecipeView {
         var view = self
         let interactor = NewRecipeInteractor()
         let presenter = NewRecipePresenter()
+        
+        //MARK: CRIA A RELAÇÃO ENTRE AS CAMADAS
         view.interactor = interactor
         interactor.presenter = presenter
         presenter.view = view
+        
         return view
     }
 
