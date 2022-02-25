@@ -26,10 +26,13 @@ struct RecipeDetailView: View {
     var interactor: ShowRecipeDetailBusinessLogic?
     var body: some View {
         ScrollView {
-            VStack(spacing: 20){
-                Image(systemName: "person.fill")
+            VStack{
+                Image(uiImage: model.recipe.image?.toUIImage() ?? UIImage(systemName: "person.fill")!)
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .aspectRatio(contentMode: .fit)
+                    .ignoresSafeArea(.all)
+                    .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height/1.4)
+                    
                 Text(model.recipe.name ?? "Sem nome")
                     .font(.system(size: 40))
                 HStack {
