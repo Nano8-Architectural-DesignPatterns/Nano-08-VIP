@@ -7,17 +7,17 @@
 
 import Foundation
 
-protocol ShowHomePresentationLogic {
-    func presentHome()
+protocol HomePresentationLogic {
+    func presentHome(viewModel: HomeViewModel)
 }
 
-class ShowHomePresenter {
+class HomePresenter {
     var view: HomeDisplayLogic?
 }
 
-extension ShowHomePresenter: ShowHomePresentationLogic {
-    func presentHome() {
+extension HomePresenter: HomePresentationLogic {
+    func presentHome(viewModel: HomeViewModel) {
         // TODO: Apresentar View
-        view?.displayHome()
+        view?.displayHome(response: viewModel)
     }
 }

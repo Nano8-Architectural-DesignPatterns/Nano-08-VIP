@@ -8,20 +8,21 @@
 import SwiftUI
 
 protocol RecipeDetailDisplayLogic {
-    func displayRecipeDetail() //TODO: Criar parâmetro recebido do presenter
+    func displayRecipeDetail(response: Recipe)
 }
 
 extension RecipeDetailView: RecipeDetailDisplayLogic {
-    func displayRecipeDetail() {
-        
+    func displayRecipeDetail(response: Recipe) {
+        recipe = recipe
     }
     
     func fetchRecipe(id: UUID) {
-    
+        interactor?.loadRecipeDetail(id: id)
     }
 }
 
 struct RecipeDetailView: View {
+    @ObservedObject var recipe = Recipe()
     var interactor: ShowRecipeDetailBusinessLogic?
     var body: some View {
         ScrollView {

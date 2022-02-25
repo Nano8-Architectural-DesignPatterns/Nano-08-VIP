@@ -12,7 +12,7 @@ struct PersistenceController {
     static var shared = PersistenceController()
     
     private let context: NSManagedObjectContext
-
+    
     init() {
         let container = NSPersistentContainer(name: "nano08")
         container.viewContext.automaticallyMergesChangesFromParent = true
@@ -24,38 +24,26 @@ struct PersistenceController {
         context = container.viewContext
     }
     
-    
-    
-    //MARK: - CREATE INGREDIENT METHOD
-    mutating func createIngredient(amount: Int, name: String, type: Int, recipe: Recipe) throws -> Ingredient{
-        let ingredient = Ingredient(context: context)
-        
-        ingredient.name = name
-        ingredient.amount = Int64(amount)
-        ingredient.type = Int64(type)
-        ingredient.recipe = recipe
-        
-        try save()
-        
-        return ingredient
-    }
-    
     //MARK: - CREATE RECIPE METHOD
-    mutating func createRecipe(desc: String, name: String, time: Int) throws -> Recipe{
+    mutating func createRecipe(desc: String, name: String, time: Int, ingredients: String, image: Data) -> Recipe {
         let recipe = Recipe(context: context)
-        
+        recipe.id = UUID()
         recipe.desc = desc
         recipe.name = name
         recipe.time = Int64(time)
-        
-        try save()
-        
+        recipe.ingredients = ingredients
+        recipe.image = image
+        do {
+            try save()
+        } catch {
+            
+        }
         return recipe
     }
     
     
     //MARK: - FETCH METHOD
-    mutating func fecthAllRecipes() -> [Recipe]{
+    mutating func fetchAllRecipes() -> [Recipe]{
         var recipes: [Recipe] = []
         
         do{
@@ -67,8 +55,16 @@ struct PersistenceController {
         return recipes
     }
     
-    
-    
+    mutating func fetchRecipe(id: UUID, completion: (Recipe) -> Void) {
+        let fetch = Recipe.fetchRequest()
+        fetch.predicate = NSPredicate(format: "id == \(id.uuidString)")
+        do {
+            let recipes = try context.fetch(fetch)
+            completion(recipes.first!)
+        } catch {
+            
+        }
+    }
     
     //MARK: - SAVE METHOD
     mutating func save() throws{
@@ -82,13 +78,11 @@ struct PersistenceController {
     }
     
     //MARK: - DELETE METHOD
-    mutating func deleteObject(object: NSManagedObject) -> Bool{
+    mutating func deleteObject(object: NSManagedObject){
         context.delete(object)
         do{
             try save()
-            return true
         }catch{
-            return false
         }
     }
     

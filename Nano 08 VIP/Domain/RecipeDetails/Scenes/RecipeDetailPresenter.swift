@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol ShowRecipeDetailPresentaionLogic {
-    func presentRecipeDetail() //TODO: Adicionar tipo recipe de response: Recipe
+    func presentRecipeDetail(recipe: Recipe)
 }
 
 class ShowRecipeDetailPresenter {
@@ -17,9 +17,8 @@ class ShowRecipeDetailPresenter {
 }
 
 extension ShowRecipeDetailPresenter: ShowRecipeDetailPresentaionLogic {
-    func presentRecipeDetail() {
-        //TODO: Apresentar View
-        view?.displayRecipeDetail() //TODO: Passar o Recipe
+    func presentRecipeDetail(recipe: Recipe) {
+        view?.displayRecipeDetail(response: recipe)
     }
     
 }

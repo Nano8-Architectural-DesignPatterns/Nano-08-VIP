@@ -7,16 +7,18 @@
 
 import Foundation
 
-protocol ShowHomeBusinessLogic {
+protocol HomeBusinessLogic {
     func loadAllRecipes()
 }
 
-class ShowHomeInteractor {
-    var presenter: ShowHomeBusinessLogic?
+class HomeInteractor {
+    var presenter: HomePresentationLogic?
 }
 
-extension ShowHomeInteractor: ShowHomeBusinessLogic {
+extension HomeInteractor: HomeBusinessLogic {
     func loadAllRecipes() {
-        // TODO: PEGAR TODOS OS RECIPES DO CORE DATA
+        let recipes = HomeViewModel()
+        recipes.allRecipes = PersistenceController.shared.fetchAllRecipes()
+        presenter?.presentHome(viewModel: recipes)
     }
 }

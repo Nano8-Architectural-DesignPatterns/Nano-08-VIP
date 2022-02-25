@@ -12,13 +12,12 @@ extension HomeView {
     
     func configureView() -> some View {
         var view = self
-        let interactor = ShowHomeInteractor()
-        let presenter = ShowHomePresenter()
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter()
         
         view.interactor = interactor
-        interactor.presenter = presenter as! ShowHomeBusinessLogic
+        interactor.presenter = presenter
         presenter.view = view
-        
         return view
     }
 }

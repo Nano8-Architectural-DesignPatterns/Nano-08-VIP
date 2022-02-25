@@ -17,7 +17,9 @@ class ShowRecipeDetailInteractor {
 
 extension ShowRecipeDetailInteractor: ShowRecipeDetailBusinessLogic {
     func loadRecipeDetail(id: UUID) {
-        //TODO: PEGAR RECIPE DO CORE DATA USANDO id
+        PersistenceController.shared.fetchRecipe(id: id) { recipe in
+            presenter?.presentRecipeDetail(recipe: recipe)
+        }
     }
 }
 

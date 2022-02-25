@@ -9,27 +9,34 @@ import SwiftUI
 import CoreData
 
 protocol HomeDisplayLogic {
-    func displayHome()
+    func displayHome(response: HomeViewModel)
 }
 
 extension HomeView: HomeDisplayLogic {
-    func displayHome() {
-        
+    func displayHome(response: HomeViewModel) {
+        recipes.allRecipes = response.allRecipes
+    }
+    
+    func fetchRecipes() {
+        interactor?.loadAllRecipes()
     }
 }
 
 struct HomeView: View {
-    // MARK: - PROPERTIES
-    @State var cardShown: Bool = false
-    @State var cardDismissal: Bool = false
-    var interactor: ShowHomeBusinessLogic?
-    
+    var interactor: HomeBusinessLogic?
+    @State var showCreateRecipe = false
+    @ObservedObject var recipes = HomeViewModel()
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(0..<6) {_ in
-                        HomeTableView()
+                    ForEach(recipes.allRecipes) { recipe in
+                        NavigationLink {
+                            RecipeDetailView()
+                                .configureView(id: recipe.id)
+                        } label: {
+                            HomeTableView(title: recipe.name ?? " ", desc: recipe.desc ?? " ", time: Int(recipe.time))
+                        }
                     }
                 }
                 .toolbar {
@@ -45,7 +52,16 @@ struct HomeView: View {
                 .navigationTitle("Receitas")
                 .padding()
             }
+            .onAppear {
+                fetchRecipes()
+            }
         }
+        .sheet(isPresented: $showCreateRecipe) {
+            fetchRecipes()
+        } content: {
+            NewRecipeView()
+        }
+
     }
 }
 

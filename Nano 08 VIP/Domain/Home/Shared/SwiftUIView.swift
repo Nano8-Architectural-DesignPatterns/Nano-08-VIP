@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct HomeTableView: View {
+    
+    var title: String
+    var desc: String
+    var time: Int
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Nome da Receita")
+            Text(title)
                 .fontWeight(.semibold)
                 .padding(.bottom, 8)
             
-            Text("Descrição da receita falando sobre ingredientes etc e tal, tô colocando tanto texto assim só pra testar o lineLimit fixado pra não passar de duas linhas, mano a WWIII tá chegando aí cuidado com os drone que joga vodka e depois acende o fósforo que isso daí é contra indicado em caso de suspeitas de dengue.")
+            Text(desc)
                 .padding(.bottom, 12)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
             
             HStack {
-                Text("Tempo de preparo: duas guerra")
+                Text("\(time)")
                     .font(.caption)
             }
         }
@@ -34,7 +39,7 @@ struct HomeTableView: View {
 
 struct HomeTableView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTableView()
+        HomeTableView(title: "Feijoada", desc: "Adiciona algo", time: 60)
             .previewLayout(.sizeThatFits)
             .padding()
     }

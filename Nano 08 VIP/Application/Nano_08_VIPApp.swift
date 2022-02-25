@@ -12,7 +12,7 @@ struct Nano_08_VIPApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RecipeDetailView()
+            HomeView()
                 .configureView()
         }
     }
