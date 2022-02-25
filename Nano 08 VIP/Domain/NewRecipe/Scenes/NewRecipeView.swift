@@ -8,13 +8,53 @@
 import SwiftUI
 
 struct NewRecipeView: View {
-    @Environment(\.managedObjectContext) var managedObjectContext
+
     
-    
+    @State private var username: String = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
+        VStack{
+            HStack{
+                VStack{
+                    Text("Nome")
+                        .offset(x: -137)
+                    TextField("", text: $username)
+                        .frame(width: 343, height: 62)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.black, lineWidth: 2)
+                        )
+                    //fgfgfg
+                }
+            }
+            .padding(.bottom, 25)
+            HStack{
+                VStack{
+                    Text("Ingredientes")
+                        .offset(x: -117)
+                    TextField("", text: $username)
+                        .frame(width: 343, height: 120)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.black, lineWidth: 2)
+                        )
+                }
+            }
+            .padding(.bottom, 25)
+            HStack{
+                VStack{
+                    Text("Tempo de preparo")
+                        .offset(x: -92 )
+                    PickerTimer()
+                        
+
+                }
+            }
+            
+        }
+
     }
 }
 

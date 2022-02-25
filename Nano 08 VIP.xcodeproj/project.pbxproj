@@ -13,6 +13,10 @@
 		15B1878B27C7F3B600DF2342 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */; };
 		15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878C27C7F3B600DF2342 /* Persistence.swift */; };
 		15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15B1878E27C7F3B600DF2342 /* nano08.xcdatamodeld */; };
+		15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */; };
+		15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEF027C825920078B485 /* HomeInteractor.swift */; };
+		15DBEEF327C826400078B485 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEF227C826400078B485 /* HomePresenter.swift */; };
+		15DBEEFF27C862180078B485 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBEEFE27C862180078B485 /* SwiftUIView.swift */; };
 		2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEB327C802D600193976 /* NewRecipeView.swift */; };
 		2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEBA27C8034600193976 /* RecipeDetailView.swift */; };
 		2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */; };
@@ -22,6 +26,7 @@
 		2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */; };
 		2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */; };
 		2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */; };
+		CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,10 @@
 		15B1878A27C7F3B600DF2342 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15B1878C27C7F3B600DF2342 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		15B1878F27C7F3B600DF2342 /* Nano_08_VIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano_08_VIP.xcdatamodel; sourceTree = "<group>"; };
+		15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		15DBEEF027C825920078B485 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		15DBEEF227C826400078B485 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		15DBEEFE27C862180078B485 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		2389DEB327C802D600193976 /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		2389DEBA27C8034600193976 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		2389DEC127C80FF500193976 /* RecipeDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsConfigurator.swift; sourceTree = "<group>"; };
@@ -41,6 +50,7 @@
 		2389DEC827C81B8500193976 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2389DEC927C81B8500193976 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		15DBEEFD27C8620F0078B485 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				15DBEEFE27C862180078B485 /* SwiftUIView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		2389DEAE27C8029300193976 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +121,7 @@
 		2389DEAF27C8029900193976 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				15DBEEFD27C8620F0078B485 /* Shared */,
 				2389DEB227C802BC00193976 /* Scenes */,
 			);
 			path = Home;
@@ -111,6 +130,7 @@
 		2389DEB027C802AD00193976 /* NewRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				CD0EF8E327C825D00002CCB0 /* Shared */,
 				2389DEB627C8031400193976 /* Scenes */,
 			);
 			path = NewRecipe;
@@ -120,6 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				15B1878527C7F3B500DF2342 /* HomeView.swift */,
+				15DBEEEE27C8245D0078B485 /* HomeConfigurator.swift */,
+				15DBEEF027C825920078B485 /* HomeInteractor.swift */,
+				15DBEEF227C826400078B485 /* HomePresenter.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -178,6 +201,14 @@
 				2389DECA27C81B8500193976 /* Ingredient+CoreDataProperties.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD0EF8E327C825D00002CCB0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,17 +283,22 @@
 			files = (
 				15B1878D27C7F3B600DF2342 /* Persistence.swift in Sources */,
 				2389DEC427C8104200193976 /* RecipeDetailsInteractor.swift in Sources */,
+				15DBEEFF27C862180078B485 /* SwiftUIView.swift in Sources */,
 				2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */,
+				15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */,
 				2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */,
 				2389DEB427C802D600193976 /* NewRecipeView.swift in Sources */,
 				2389DECB27C81B8500193976 /* Recipe+CoreDataClass.swift in Sources */,
 				2389DEC627C811E800193976 /* RecipeDetailPresenter.swift in Sources */,
 				2389DECE27C81B8500193976 /* Ingredient+CoreDataProperties.swift in Sources */,
+				CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */,
 				15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */,
 				2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */,
 				15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */,
+				15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */,
 				2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */,
 				15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */,
+				15DBEEF327C826400078B485 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
