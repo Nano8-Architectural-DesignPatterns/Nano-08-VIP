@@ -7,9 +7,26 @@
 
 import SwiftUI
 
+protocol NewRecipelDisplayLogic {
+    func displayRecipeDetail() //TODO: Criar parâmetro recebido do presenter
+}
+
+extension NewRecipeView: NewRecipelDisplayLogic {
+    func displayRecipeDetail() {
+        
+    }
+    
+    func fetchRecipe(id: UUID) {
+    
+    }
+}
+
+
 struct NewRecipeView: View {
     
     @State private var username: String = ""
+    
+    var interactor: NewRecipeBusinessLogic?
     
     var body: some View {
         VStack{
