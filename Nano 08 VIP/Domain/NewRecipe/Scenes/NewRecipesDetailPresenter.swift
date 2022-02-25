@@ -17,7 +17,7 @@ class NewRecipePresenter {
 
 extension NewRecipePresenter: NewRecipePresentaionLogic {
     func presentNewRecipeDetail() {
-        view?.newRecipeDetail()
+        view?.newRecipeShowAlert()
     }
 
 }

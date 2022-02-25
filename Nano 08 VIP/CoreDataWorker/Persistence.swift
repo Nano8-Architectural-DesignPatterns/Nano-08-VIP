@@ -56,9 +56,9 @@ struct PersistenceController {
     mutating func fetchRecipe(id: UUID, completion: (Recipe) -> Void) {
         let fetch = Recipe.fetchRequest()
         fetch.predicate = NSPredicate(format: "id == %@", "\(id.uuidString)")
-   
         do {
             let recipes = try context.fetch(fetch)
+            print("QUANTIDADE DE RECIPES \(recipes.count)")
             completion(recipes.first!)
         } catch {
             

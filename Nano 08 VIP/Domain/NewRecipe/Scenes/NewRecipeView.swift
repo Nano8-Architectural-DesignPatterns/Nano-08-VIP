@@ -8,11 +8,11 @@
 import SwiftUI
 
 protocol NewRecipelDisplayLogic {
-    mutating func newRecipeDetail()
+    mutating func newRecipeShowAlert()
 }
 
 extension NewRecipeView: NewRecipelDisplayLogic {
-    mutating func newRecipeDetail() {
+    mutating func newRecipeShowAlert() {
         showAlert.show = true
     }
     

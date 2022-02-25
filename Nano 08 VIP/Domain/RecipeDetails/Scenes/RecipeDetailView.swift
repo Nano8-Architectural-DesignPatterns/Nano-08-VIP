@@ -13,7 +13,7 @@ protocol RecipeDetailDisplayLogic {
 
 extension RecipeDetailView: RecipeDetailDisplayLogic {
     mutating func displayRecipeDetail(response: Recipe) {
-        self.recipe = response
+        self.model.recipe = response
     }
     
     func fetchRecipe(id: UUID) {
@@ -22,7 +22,7 @@ extension RecipeDetailView: RecipeDetailDisplayLogic {
 }
 
 struct RecipeDetailView: View {
-    @ObservedObject var recipe = Recipe()
+    @ObservedObject var model: RecipeDetailModel = RecipeDetailModel()
     var interactor: ShowRecipeDetailBusinessLogic?
     var body: some View {
         ScrollView {
@@ -30,19 +30,19 @@ struct RecipeDetailView: View {
                 Image(systemName: "person.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
-                Text(recipe.name ?? "Sem nome")
+                Text(model.recipe.name ?? "Sem nome")
                     .font(.system(size: 40))
                 HStack {
                     VStack (alignment: .leading, spacing: 20){
-                        Text("Tempo: \(recipe.time) min")
+                        Text("Tempo: \(model.recipe.time) min")
                             .padding(.leading, 10)
                         Text("Ingredientes:")
                             .padding(.leading, 10)
-                        Text(recipe.ingredients ?? "Sem ingredientes")
+                        Text(model.recipe.ingredients ?? "Sem ingredientes")
                             .padding(.leading, 30)
                         Text("Modo de preparo:")
                             .padding(.leading, 10)
-                        Text(recipe.desc ?? "Sem descrição")
+                        Text(model.recipe.desc ?? "Sem descrição")
                             .padding(.leading, 30)
                     }
                 }
