@@ -8,25 +8,23 @@
 import SwiftUI
 
 protocol NewRecipelDisplayLogic {
-    func displayRecipeDetail() //TODO: Criar parâmetro recebido do presenter
+    func newRecipeDetail()
 }
 
 extension NewRecipeView: NewRecipelDisplayLogic {
-    func displayRecipeDetail() {
+    func newRecipeDetail() {
         
     }
-    
-    func fetchRecipe(id: UUID) {
-    
+    func createRecipe() {
+        PersistenceController.shared.createRecipe(request: CreateRecipeRequest(name: name, desc: " ", image: Data(), ingredients: ingredientes, time: picker.selections.first!))
     }
 }
 
-//-
 struct NewRecipeView: View {
-
     
-    @State private var username: String = ""
-    
+    @State private var name: String = ""
+    @State private var ingredientes: String = ""
+    private var picker = PickerTimer()
     var interactor: NewRecipeBusinessLogic?
     
     var body: some View {
@@ -35,14 +33,13 @@ struct NewRecipeView: View {
                 VStack{
                     Text("Nome")
                         .offset(x: -137)
-                    TextField("", text: $username)
+                    TextField("", text: $name)
                         .frame(width: 343, height: 62)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
                                 .stroke(Color.black, lineWidth: 2)
                         )
-                    //fgfgfg
                 }
             }
             .padding(.bottom, 25)
@@ -50,7 +47,7 @@ struct NewRecipeView: View {
                 VStack{
                     Text("Ingredientes")
                         .offset(x: -117)
-                    TextField("", text: $username)
+                    TextField("", text: $ingredientes)
                         .frame(width: 343, height: 120)
                         .cornerRadius(15)
                         .overlay(
@@ -64,12 +61,13 @@ struct NewRecipeView: View {
                 VStack{
                     Text("Tempo de preparo")
                         .offset(x: -92 )
-                    PickerTimer()
+                    picker
                 }
+            }.onDisappear {
+                createRecipe()
+                print("Salvando dados")
             }
-            
         }
-
     }
 }
 

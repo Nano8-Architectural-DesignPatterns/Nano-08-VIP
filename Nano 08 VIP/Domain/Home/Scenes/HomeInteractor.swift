@@ -17,8 +17,6 @@ class HomeInteractor {
 
 extension HomeInteractor: HomeBusinessLogic {
     func loadAllRecipes() {
-        let recipes = HomeViewModel()
-        recipes.allRecipes = PersistenceController.shared.fetchAllRecipes()
-        presenter?.presentHome(viewModel: recipes)
+        presenter?.presentHome(allRecipes: PersistenceController.shared.fetchAllRecipes())
     }
 }

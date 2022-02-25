@@ -25,20 +25,18 @@ struct PersistenceController {
     }
     
     //MARK: - CREATE RECIPE METHOD
-    mutating func createRecipe(desc: String, name: String, time: Int, ingredients: String, image: Data) -> Recipe {
+    mutating func createRecipe(request: CreateRecipeRequest) {
         let recipe = Recipe(context: context)
         recipe.id = UUID()
-        recipe.desc = desc
-        recipe.name = name
-        recipe.time = Int64(time)
-        recipe.ingredients = ingredients
-        recipe.image = image
+        recipe.desc = request.desc
+        recipe.name = request.name
+        recipe.time = Int64(request.time)
+        recipe.ingredients = request.ingredients
+        recipe.image = request.image
         do {
             try save()
         } catch {
-            
         }
-        return recipe
     }
     
     
@@ -57,7 +55,8 @@ struct PersistenceController {
     
     mutating func fetchRecipe(id: UUID, completion: (Recipe) -> Void) {
         let fetch = Recipe.fetchRequest()
-        fetch.predicate = NSPredicate(format: "id == \(id.uuidString)")
+        fetch.predicate = NSPredicate(format: "id == %@", "\(id.uuidString)")
+   
         do {
             let recipes = try context.fetch(fetch)
             completion(recipes.first!)
@@ -71,6 +70,7 @@ struct PersistenceController {
         if context.hasChanges {
             do {
                 try context.save()
+                print("Salvo")
             } catch {
                 //TODO: Create error
             }

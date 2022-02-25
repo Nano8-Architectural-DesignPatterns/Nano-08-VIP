@@ -18,6 +18,7 @@ extension HomeView {
         view.interactor = interactor
         interactor.presenter = presenter
         presenter.view = view
+        view.fetchRecipes()
         return view
     }
 }

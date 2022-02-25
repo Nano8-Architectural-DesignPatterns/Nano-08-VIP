@@ -25,6 +25,7 @@
 		2397DC5C27C867C50075FC04 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397DC5A27C867C50075FC04 /* Recipe+CoreDataClass.swift */; };
 		2397DC6027C869270075FC04 /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397DC5F27C869270075FC04 /* RecipesModel.swift */; };
 		2397DC6427C873260075FC04 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397DC6227C873260075FC04 /* Recipe+CoreDataProperties.swift */; };
+		2397DC6627C877C90075FC04 /* NewRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397DC6527C877C90075FC04 /* NewRecipeModel.swift */; };
 		CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */; };
 		CDC4E3E427C8679900A448BF /* NewRecipesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E3E327C8679900A448BF /* NewRecipesConfigurator.swift */; };
 		CDC4E3E627C867BE00A448BF /* NewRecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4E3E527C867BE00A448BF /* NewRecipesInteractor.swift */; };
@@ -51,6 +52,7 @@
 		2397DC5A27C867C50075FC04 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2397DC5F27C869270075FC04 /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
 		2397DC6227C873260075FC04 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2397DC6527C877C90075FC04 /* NewRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeModel.swift; sourceTree = "<group>"; };
 		CD0EF8E427C825E00002CCB0 /* TimerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
 		CDC4E3E327C8679900A448BF /* NewRecipesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesConfigurator.swift; sourceTree = "<group>"; };
 		CDC4E3E527C867BE00A448BF /* NewRecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesInteractor.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				CD0EF8E327C825D00002CCB0 /* Shared */,
 				2389DEB627C8031400193976 /* Scenes */,
+				2397DC6527C877C90075FC04 /* NewRecipeModel.swift */,
 			);
 			path = NewRecipe;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				15DBEEFF27C862180078B485 /* SwiftUIView.swift in Sources */,
 				2397DC6427C873260075FC04 /* Recipe+CoreDataProperties.swift in Sources */,
 				2389DEC227C80FF500193976 /* RecipeDetailsConfigurator.swift in Sources */,
+				2397DC6627C877C90075FC04 /* NewRecipeModel.swift in Sources */,
 				15DBEEF127C825920078B485 /* HomeInteractor.swift in Sources */,
 				2397DC5C27C867C50075FC04 /* Recipe+CoreDataClass.swift in Sources */,
 				2389DEBB27C8034600193976 /* RecipeDetailView.swift in Sources */,
@@ -308,12 +312,10 @@
 				CD0EF8E527C825E00002CCB0 /* TimerPicker.swift in Sources */,
 				15B1879027C7F3B600DF2342 /* nano08.xcdatamodeld in Sources */,
 				CDC4E3E827C867ED00A448BF /* NewRecipesDetailPresenter.swift in Sources */,
-				2389DECC27C81B8500193976 /* Recipe+CoreDataProperties.swift in Sources */,
 				15B1878627C7F3B500DF2342 /* HomeView.swift in Sources */,
 				15DBEEEF27C8245D0078B485 /* HomeConfigurator.swift in Sources */,
 				2397DC6027C869270075FC04 /* RecipesModel.swift in Sources */,
 				CDC4E3E427C8679900A448BF /* NewRecipesConfigurator.swift in Sources */,
-				2389DECD27C81B8500193976 /* Ingredient+CoreDataClass.swift in Sources */,
 				CDC4E3E627C867BE00A448BF /* NewRecipesInteractor.swift in Sources */,
 				15B1878427C7F3B500DF2342 /* Nano_08_VIPApp.swift in Sources */,
 				15DBEEF327C826400078B485 /* HomePresenter.swift in Sources */,

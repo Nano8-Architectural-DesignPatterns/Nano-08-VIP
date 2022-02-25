@@ -9,12 +9,13 @@ import SwiftUI
 import CoreData
 
 protocol HomeDisplayLogic {
-    func displayHome(response: HomeViewModel)
+    func displayHome(response: [Recipe])
 }
 
 extension HomeView: HomeDisplayLogic {
-    func displayHome(response: HomeViewModel) {
-        recipes.allRecipes = response.allRecipes
+    func displayHome(response: [Recipe]) {
+        recipes.allRecipes = response
+        recipes.objectWillChange.send()
     }
     
     func fetchRecipes() {
@@ -42,25 +43,25 @@ struct HomeView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            // TODO: Criar ação de adicionar uma receita.
+                        showCreateRecipe = true
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.primary)
                         }
                     }
                 }
                 .navigationTitle("Receitas")
                 .padding()
             }
-            .onAppear {
-                fetchRecipes()
-            }
+            .sheet(isPresented: $showCreateRecipe, onDismiss: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    fetchRecipes()
+                }
+            }, content: {
+                NewRecipeView()
+            })
         }
-        .sheet(isPresented: $showCreateRecipe) {
-            fetchRecipes()
-        } content: {
-            NewRecipeView()
-        }
+        
 
     }
 }

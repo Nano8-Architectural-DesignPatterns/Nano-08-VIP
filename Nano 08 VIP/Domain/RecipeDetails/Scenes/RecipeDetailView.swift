@@ -8,12 +8,12 @@
 import SwiftUI
 
 protocol RecipeDetailDisplayLogic {
-    func displayRecipeDetail(response: Recipe)
+   mutating func displayRecipeDetail(response: Recipe)
 }
 
 extension RecipeDetailView: RecipeDetailDisplayLogic {
-    func displayRecipeDetail(response: Recipe) {
-        recipe = recipe
+    mutating func displayRecipeDetail(response: Recipe) {
+        self.recipe = response
     }
     
     func fetchRecipe(id: UUID) {

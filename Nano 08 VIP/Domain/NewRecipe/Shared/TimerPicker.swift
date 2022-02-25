@@ -64,7 +64,6 @@ struct PickerView: UIViewRepresentable {
     }
 }
 
-import SwiftUI
 
 struct PickerTimer: View {
     private let data: [[String]] = [
@@ -73,7 +72,7 @@ struct PickerTimer: View {
         Array(0...600).map { "\($0)" }
     ]
 
-    @State private var selections: [Int] = [5, 10, 50]
+    @State var selections: [Int] = [5, 10, 50]
 
     var body: some View {
         VStack {

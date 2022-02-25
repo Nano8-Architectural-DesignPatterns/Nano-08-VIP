@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NewRecipeBusinessLogic {
-    func loadRecipeDetail(id: UUID)
+    func createRecipe(request: CreateRecipeRequest)
 }
 
 class NewRecipeInteractor {
@@ -16,9 +16,12 @@ class NewRecipeInteractor {
 }
 
 extension NewRecipeInteractor: NewRecipeBusinessLogic  {
-
-    func loadRecipeDetail(id: UUID) {
-        //TODO: PEGAR RECIPE DO CORE DATA USANDO id
+    func createRecipe(request: CreateRecipeRequest) {
+        PersistenceController.shared.createRecipe(request: request)
+        presenter?.presentNewRecipeDetail()
     }
+    
+
+
 }
 

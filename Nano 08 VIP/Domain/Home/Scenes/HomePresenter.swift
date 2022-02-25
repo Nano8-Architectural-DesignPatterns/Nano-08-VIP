@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresentationLogic {
-    func presentHome(viewModel: HomeViewModel)
+    func presentHome(allRecipes: [Recipe])
 }
 
 class HomePresenter {
@@ -16,8 +16,7 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresentationLogic {
-    func presentHome(viewModel: HomeViewModel) {
-        // TODO: Apresentar View
-        view?.displayHome(response: viewModel)
+    func presentHome(allRecipes: [Recipe]) {
+        view?.displayHome(response: allRecipes)
     }
 }
