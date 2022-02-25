@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewRecipeView: View {
+
     
     @State private var username: String = ""
     
@@ -53,6 +54,7 @@ struct NewRecipeView: View {
             }
             
         }
+
     }
 }
 
