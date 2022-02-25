@@ -35,23 +35,22 @@ struct NewRecipeView: View {
     
     var body: some View {
         VStack{
+            VStack(alignment: .center) {
+                Image(uiImage: imageData?.toUIImage() ?? UIImage(systemName: "person")!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(Circle())
+                    .frame(width: 80, height: 80)
+                
+                Button {
+                    showingImagePicker = true
+                } label: {
+                    Text("Adicionar foto")
+                }
+                .padding(.vertical, 8)
+            }
             HStack{
                 VStack(alignment: .leading) {
-                    Group {
-                        Image(uiImage: imageData?.toUIImage() ?? UIImage(systemName: "person")!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .clipShape(Circle())
-                            .frame(width: 62, height: 62)
-                        
-                        Button {
-                            showingImagePicker = true
-                        } label: {
-                            Text("Alterar foto")
-                        }
-                        .padding(.top, 5)
-                        
-                    }
                     
                     Text("Nome")
                         
