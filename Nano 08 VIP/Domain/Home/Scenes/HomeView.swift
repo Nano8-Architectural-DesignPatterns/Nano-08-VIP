@@ -54,11 +54,12 @@ struct HomeView: View {
                 .padding()
             }
             .sheet(isPresented: $showCreateRecipe, onDismiss: {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    fetchRecipes()
-                }
+                fetchRecipes()
             }, content: {
-                NewRecipeView()
+                NavigationView{
+                    NewRecipeView()
+                        .configureView()
+                }
             })
         }
         

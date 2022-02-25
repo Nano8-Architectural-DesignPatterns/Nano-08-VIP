@@ -8,22 +8,25 @@
 import SwiftUI
 
 protocol NewRecipelDisplayLogic {
-    func newRecipeDetail()
+    mutating func newRecipeDetail()
 }
 
 extension NewRecipeView: NewRecipelDisplayLogic {
-    func newRecipeDetail() {
-        
+    mutating func newRecipeDetail() {
+        showAlert.show = true
     }
+    
     func createRecipe() {
-        PersistenceController.shared.createRecipe(request: CreateRecipeRequest(name: name, desc: " ", image: Data(), ingredients: ingredientes, time: picker.selections.first!))
+        let request = CreateRecipeRequest(name: name, desc: " ", image: Data(), ingredients: ingredientes, time: picker.selections.first!)
+        interactor?.createRecipe(request: request)
     }
 }
 
 struct NewRecipeView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var name: String = ""
     @State private var ingredientes: String = ""
+    @ObservedObject var showAlert = AlertFunction()
     private var picker = PickerTimer()
     var interactor: NewRecipeBusinessLogic?
     
@@ -63,11 +66,21 @@ struct NewRecipeView: View {
                         .offset(x: -92 )
                     picker
                 }
-            }.onDisappear {
-                createRecipe()
-                print("Salvando dados")
             }
         }
+        .alert(Text("Receita salva!"), isPresented: $showAlert.show, actions: {
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("OK")
+            }
+
+        })
+        .navigationBarItems(trailing:
+            Button("Salvar", action: {
+              createRecipe()
+            })
+        )
     }
 }
 
