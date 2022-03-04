@@ -8,26 +8,48 @@
 import SwiftUI
 
 protocol RecipeDetailDisplayLogic {
-    func displayRecipeDetail() //TODO: Criar parâmetro recebido do presenter
+    mutating func displayRecipeDetail(response: Recipe)
 }
 
 extension RecipeDetailView: RecipeDetailDisplayLogic {
-    func displayRecipeDetail() {
-        
+    mutating func displayRecipeDetail(response: Recipe) {
+        self.model.recipe = response
     }
     
     func fetchRecipe(id: UUID) {
-    
+        interactor?.loadRecipeDetail(id: id)
     }
 }
 
 struct RecipeDetailView: View {
+    @ObservedObject var model: RecipeDetailModel = RecipeDetailModel()
     var interactor: ShowRecipeDetailBusinessLogic?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .onAppear {
-                fetchRecipe(id: UUID()) //TODO: Passar 
+        ScrollView {
+            Image(uiImage: model.recipe.image?.toUIImage() ?? UIImage(systemName: "questionmark.circle")!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom, 12)
+            
+            Text(model.recipe.name ?? "Sem nome")
+                .padding(.bottom, 18)
+                .font(.system(size: 40))
+            
+            VStack(alignment: .leading) {
+                Text("Ingredientes: \(model.recipe.ingredients ?? "Sem ingredientes")")
+                    .padding(.horizontal, 12)
+                    .padding(.bottom, 12)
+                
+                Text("Modo de preparo: \(model.recipe.desc ?? "Sem descrição")")
+                    .padding(.horizontal, 12)
+                    .padding(.bottom, 12)
+
+                Text("Tempo de preparo: \(Int(model.recipe.time))min")
+                    .padding(.horizontal, 12)
+                    .padding(.bottom, 12)
             }
+        }
+        .ignoresSafeArea(.all)
     }
 }
 
